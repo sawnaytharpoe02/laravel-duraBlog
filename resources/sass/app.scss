@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+@import "boxicons/css/boxicons.css";
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.main-container {
+    min-height: 100dvh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+#logo {
+    animation: fill-mode 1.6s ease forwards 3.8s;
+}
+
+#logo path:nth-child(1) {
+    stroke-dasharray: 596;
+    stroke-dashoffset: 596;
+    animation: path-ani 2.5s ease forwards;
+}
+
+#logo path:nth-child(2) {
+    stroke-dasharray: 557;
+    stroke-dashoffset: 557;
+    animation: path-ani 2.5s ease forwards 0.3s;
+}
+
+#logo path:nth-child(3) {
+    stroke-dasharray: 590;
+    stroke-dashoffset: 590;
+    animation: path-ani 2.5s ease forwards 0.6s;
+}
+
+#logo path:nth-child(4) {
+    stroke-dasharray: 524;
+    stroke-dashoffset: 524;
+    animation: path-ani 2.5s ease forwards 0.9s;
+}
+
+#logo path:nth-child(5) {
+    stroke-dasharray: 557;
+    stroke-dashoffset: 557;
+    animation: path-ani 2.5s ease forwards 1.2s;
+}
+
+#logo path:nth-child(6) {
+    stroke-dasharray: 361;
+    stroke-dashoffset: 361;
+    animation: path-ani 2.5s ease forwards 1.5s;
+}
+
+#logo path:nth-child(7) {
+    stroke-dasharray: 800;
+    stroke-dashoffset: 800;
+    animation: path-ani 2.5s ease forwards 1.8s;
+}
+
+#logo path:nth-child(8) {
+    stroke-dasharray: 288;
+    stroke-dashoffset: 288;
+    animation: path-ani 2.5s ease forwards 2.1s;
+}
+
+#logo path:nth-child(9) {
+    stroke-dasharray: 652;
+    stroke-dashoffset: 652;
+    animation: path-ani 2.5s ease forwards 2.4s;
+}
+
+@keyframes path-ani {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fill-mode {
+    from {
+        fill: transparent;
+    }
+
+    to {
+        fill: #313b44;
+    }
+}
+
+//navigatiion
+.nav-item {
+    @apply text-white text-lg uppercase md:text-base md:capitalize md:text-darkSteelBlue cursor-pointer;
+}
+
+.nav-item:hover,
+.nav-item.active {
+    background-color: transparent;
+    color: lightblue;
+}
+
+.social-icons {
+    @apply w-10 h-10 bg-steelBlue rounded-full flex justify-center items-center;
+}
+
+.contact-icon {
+    @apply mr-4 text-xl text-lightBlue cursor-pointer;
+}
+
+//hamburger
+.nav-items.change {
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 2;
+}
+
+#hamburger-menu {
+    width: 40px;
+    z-index: 2;
+}
+
+.bar {
+    height: 5px;
+    width: 100%;
+    background-color: #3a4c5c;
+    display: block;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+#bar1 {
+    transform: translateY(-4px);
+}
+
+#bar3 {
+    transform: translateY(4px);
+}
+
+.change .bar {
+    background-color: white;
+}
+
+.change #bar1 {
+    transform: translateY(4px) rotateZ(-45deg);
+}
+
+.change #bar2 {
+    opacity: 0;
+}
+
+.change #bar3 {
+    transform: translateY(-6px) rotateZ(45deg);
+}
+
+.menu-bg {
+    top: 0;
+    right: 0;
+    position: absolute;
+    z-index: 1;
+    width: 0;
+    height: 0;
+    margin: 30px 0 20px 20px;
+    background: radial-gradient(circle, #313b44, #313b44);
+    border-radius: 50%;
+    transition: 0.3s ease;
+}
+
+.change-bg {
+    width: 545px;
+    height: 565px;
+    transform: translate(43%, -25%);
+}
+
+//articles page
+.page-link {
+    @apply px-4 py-3 leading-tight text-darkSteelBlue rounded border border-gray-300 bg-white hover:text-white hover:bg-thickBlue hover:border-thickBlue transition-all duration-150;
+}
+
+.active {
+    @apply bg-thickBlue border-thickBlue text-white;
+}
+
+//contact page
+.flex-col-center {
+    @apply flex flex-col items-center;
+}
+
+.flex-row-center {
+    @apply flex justify-center items-center;
+}
+
+.contact-form-gps .contact-form-gp {
+    @apply grid gap-1;
+}
+
+.contact-form-gp input,
+.contact-form-gp textarea {
+    outline: none;
+    border: 1.6px solid transparent;
+    border-bottom: 1.6px solid #ccc;
+}
+
+.contact-form-gp input:focus,
+.contact-form-gp textarea:focus {
+    @apply ring-transparent border-transparent border-b-thickBlue;
+}
+
+//register && login in page
+.or-divider span {
+    height: 1px;
+    width: 190px;
+    background-color: #d2d1d1;
+}
+
+.sign-form-gps .form-gp {
+    @apply grid gap-2;
+}
+
+.sign-form-gps .form-gp input,
+.sign-form-gps .form-gp select {
+    @apply border outline-darkSteelBlue rounded-lg;
+}
+
+//detail article page
+.detail-page .cmt-form-gp {
+    @apply grid gap-2;
+}
+
+.detail-page .cmt-form-gp label {
+    @apply text-sm font-semibold text-thickBlue;
+}
+
+.detail-page .cmt-form-gp > input,
+textarea {
+    @apply py-2 px-2 outline-none border border-solid border-gray-200 focus:border-thickBlue;
+}
+
+//responsive design layout
+@media (max-width: 440px) {
+    #logo path:nth-child(1),
+    #logo path:nth-child(2),
+    #logo path:nth-child(3),
+    #logo path:nth-child(4) {
+        transform: translateY(-80px);
+    }
+
+    #logo path:nth-child(5),
+    #logo path:nth-child(6),
+    #logo path:nth-child(7),
+    #logo path:nth-child(8),
+    #logo path:nth-child(9) {
+        transform: translate(-300px, 80px);
+    }
+}
