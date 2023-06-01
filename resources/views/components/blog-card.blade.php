@@ -13,13 +13,11 @@
         href="/blogs/{{$blog->slug}}">{{$blog->title}}</a></h3>
   </div>
   <div class="w-fit flex items-center justify-between space-x-4">
-    <img class="w-[60px] h-[60px] rounded-full"
-      src="https://images.unsplash.com/photo-1548964095-b9a292144866?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGJ1c3NpbmVzcyUyMG1hbnxlbnwwfDJ8MHx8&auto=format&fit=crop&w=500&q=60"
-      alt="" />
+    <img class="w-[60px] h-[60px] rounded-full" src="{{$blog->author->avatar}}" alt="" />
     <div class="space-y-2">
       <p class="text-darkSteelBlue font-semibold"><a
           href="/blogs/?username={{$blog->author->username}}">{{$blog->author->name}}</a></p>
-      <p class="text-lightBlue text-uppercase text-sm">CEO, PRODUCT DESIGNER</p>
+      <p class="text-lightBlue text-uppercase text-sm">CEO, SOFTWARE ENGINEER</p>
     </div>
   </div>
 </article>
