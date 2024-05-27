@@ -7,19 +7,6 @@
         <h5 class="text-gray-600 text-base">Log in to your account to access exclusive blog content and stay up-to-date
           on the latest news and insights</h5>
       </div>
-      {{--<div class="py-3 rounded-lg shadow border flex-row-center gap-3 cursor-pointer">
-        <img src="/blog-img/google.png" alt="">
-        <a>Log in with Google</a>
-      </div>
-      <div class="or-divider flex flex-row items-center justify-between text-gray-400">
-        <span></span>
-        <p>OR</p>
-        <span></span>
-      </div>--}}
-      {{--<div class="form-gp">
-        <label for="username">User Name</label>
-        <input type="text" id="username" class="focus:ring-0 focus:border-transparent" placeholder="William James">
-      </div>--}}
       <div class="form-gp">
         <label for="email">Email</label>
         <input type="email" id="email" name="email" value="{{old('email')}}"

@@ -3,7 +3,9 @@
   class="blog flex flex-col lg:flex-row lg:h-[90vh] {{ !$condition ? 'flex-row-reverse bg-darkSteelBlue text-white' : 'text-darkSteelBlue' }}">
   <!-- blog img -->
   <div class="blog-img lg:basis-1/2" data-aos="zoom-in-up" data-aos-duration="600">
-    <img class="w-full h-[500px] lg:w-full lg:h-full object-cover" src="storage/{{$blog->thumbnail}}" alt="" />
+    <img class="w-full h-[500px] lg:w-full lg:h-full object-cover"
+      src="{{$blog->thumbnail ? asset('storage/'.$blog->thumbnail) : 'https://img.freepik.com/free-vector/wall-post-concept-illustration_114360-1022.jpg?t=st=1716792888~exp=1716796488~hmac=2c5de35359ba34083a7dabbfdab65fc75b70a79edd94f7b58cc0956d86d840d2&w=740'}}"
+      alt="blog image" />
   </div>
   <!-- blog content -->
   <div class="flex flex-col justify-center h-[350px] md:h-[500px] lg:basis-1/2 lg:h-full" data-aos="zoom-in-up"
